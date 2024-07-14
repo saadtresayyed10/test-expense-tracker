@@ -28,7 +28,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
     <li className={transaction.amount < 0 ? "minus" : "plus"}>
       <p>{transaction.text}</p>
       <span>
-        {sign}${addCommas(Math.abs(transaction.amount))}
+        {sign}₹{addCommas(Math.abs(transaction.amount))}
       </span>
       <button
         onClick={() => handleDeletetransaction(transaction.id)}
